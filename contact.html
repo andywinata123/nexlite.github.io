@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="">PT NEXELITE CP INDONESIA</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="website.html">home</a></li>
+                    <li><a href="#courses">courses</a></li>
+                    <li><a href="#tutors">Tutors</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="login.html" class="tbl-biru">sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://img.freepik.com/free-photo/aerial-view-container-cargo-ship-sea_335224-722.jpg?w=1060&t=st=1659862705~exp=1659863305~hmac=a79821487310fe371fa3498f4feeba12221ec1441961da0f1010e77eb462c78a" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1380.jpg?w=1060&t=st=1659862829~exp=1659863429~hmac=c497685b3d7f112ebf52837b62369d417d0a0caaee189457e0ec5c03ceb364a8" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1370.jpg?w=1060&t=st=1659862852~exp=1659863452~hmac=55e924f9a95d0bc979ecc222622e1e2deb59c0800b15008f2ad9df9cf5bf2103" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        
+        <!-- js script -->
+        <script>
+let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        
+        </script>
+        
+</body>
+</html>
